@@ -1,0 +1,2 @@
+# Bet
+For practicing python.
