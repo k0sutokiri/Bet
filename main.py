@@ -1,7 +1,10 @@
-import discord as dc
+import discord
 from discord.ext import commands
 
-bet = commands.Bot(command_prefix = '&')
+intents = discord.Intents.default()
+intents.members = True
+
+bet = commands.Bot(command_prefix = '&', intents = intents)
 
 @bet.event
 async def on_ready():
@@ -17,4 +20,4 @@ async def on_member_remove(member):
     channel_out = bet.get_channels(994958557042712617)
     await channel_out.send(f"滾啦 {member}")
 
-bet.run("OTk0OTQ2MTIyNjM4NDQyNDk2.Gh9QhZ.UcYQBnvtqmfl0RQoBEtFfGr2_SKvw_r2M2z8YE")
+bet.run("OTk0OTQ2MTIyNjM4NDQyNDk2.GIIVxq.VrNkbCFp3DJ8A-XShNu543OWzOjnSGxpV6Ol2I")
